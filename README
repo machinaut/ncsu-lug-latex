@@ -6,3 +6,16 @@ Sponsored by Qualcomm (thanks for the pizza!)
 
 Presenter: Alex Ray
 Date: Tues, Nov 3, 2009
+
+*** TO BUILD THE PRESENTATION ***
+run the build script
+$ ./build.sh
+
+It should be pretty self-explanitory.
+It has some package dependencies, but most of those
+are documented as they come up (I tried my best).
+I dont remember all of the LaTeX packages on my system,
+but all of them were in the Ubuntu repositories.
+
+If you have issues you can email me at:
+<ajray><arrobase><ncsu><dot><edu>
