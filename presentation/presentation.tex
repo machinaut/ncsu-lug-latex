@@ -33,7 +33,7 @@
 }
 
 \usepackage{graphicx}
-\graphicspath{{../hello/}}
+\graphicspath{{../hello/}{../images/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 \usepackage[english]{babel}
@@ -150,8 +150,17 @@
 
 \subsection{A Quick ``Hello World''}
 \begin{frame}{Code}
-  %\include{../hello/hello-code}
   \import{../hello/}{hello-code}
+\end{frame}
+\begin{frame}{In English this time}
+  \begin{itemize}
+    \item This document is an article.
+    \item Its title is ``Cartesian closed categories and the price of eggs''.
+    \item Its author is Jane Doe.
+    \item It was written in September 1994.
+    \item The document consists of a title followed by the text ``Hello world!''
+
+  \end{itemize}
 \end{frame}
 \begin{frame}{Results}
   %\setlength\fboxsep{0pt}
@@ -191,6 +200,95 @@
     Many additional packages and styles contributed by the community 
   \item
     Archived in the \hyperref[http://www.ctan.org]{Comprehensive TeX Archive Network (CTAN)}\footnote{http://www.ctan.org/}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The many facets of \LaTeX}
+  \begin{itemize}
+  \item {\LaTeX} refers to multiple things
+  \item
+    NOT a Word-Processor (e.g. Microsoft Word)
+  \item
+    WYSIWYM instead of WYSIWYG
+  \begin{itemize}
+    \item
+      What-You-See-Is-What-You-Mean (semantics), versus
+    \item
+      What-You-See-Is-What-You-Get  (visual syntax)
+  \end{itemize}
+  \item
+    Document Preparation System
+  \begin{itemize}
+    \item
+      Made for high-quality typesetting
+    \item
+      Commonly used for technical/scientific documents
+  \end{itemize}
+  \item
+    Document Markup Language
+  \begin{itemize}
+    \item
+      Similar to HTML. (IMHO - could be better)
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Disadvantages}
+  \begin{itemize}
+  \item
+    Lack of a 'Live Preview', must be compiled to view results.
+    (This is general to all WYSIWYM systems.)
+  \item
+    Must learn the markup language and command syntax.
+  \begin{itemize}
+    \item
+      Programmers feel right at home, but others may find this a
+       difficulty in using \LaTeX
+    \item
+      Users only need to learn as much syntax as they want to use
+    \item
+      General to all markup languages
+  \end{itemize}
+  \item
+    Difficult to manually adjust the typesetting
+  \begin{itemize}
+  \item
+    This is frustrating to those familiar with WYSISYG editors
+  \item
+    This is actually considered an advantage by users familiar with
+    \LaTeX
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Advantages}
+  \begin{itemize}
+  \item
+    Forces authors to focus on the content (what you want to say)
+      instead of the layout (how it looks on the page)
+  \begin{itemize}
+    \item
+      This often trips up new users, who think of this as a
+        requirement for document creation
+  \end{itemize}
+  \item
+    The visual layout is consistent throughout a document
+  \item
+    Separation of content and style (like CSS on web pages)
+    enables users to work on each seperately
+  \item
+    Mathematical Formulae (LaTeX is the standard)
+  \item
+    Indexes, ToC's, Footnotes, References and Bibliographies are
+      easily and cleanly generated
+  \begin{itemize}
+    \item
+      Compare to WYSIWYG editors
+    \item
+      Requires authors to correctly structure their documents
+    \item
+      Benefits the reader as well
+  \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -264,6 +362,394 @@
 \end{frame}
 
 
+\subsection{How to use \LaTeX}
+
+\begin{frame}{\LaTeX, the Document Creation System}
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=0.9\textwidth]{LaTeXdiagram}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Simple Usage}
+  \begin{itemize}
+    \item
+      The simplest usage case is using a general (raw) text editor:
+    \begin{itemize}
+      \item Examples: NotePad, Emacs, Vim, Notepad++, Wordpad
+    \end{itemize}
+    \item
+      Documents are compiled via the command line
+    \begin{itemize}
+      \item Programs to compile .tex source:
+        {\tt tex}, {\tt latex}, {\tt pdftex}, {\tt pdflatex}
+      \item Programs to convert documents between types:
+        {\tt dvi2ps}, {\tt ps2pdf}, {\tt pdf2ps}
+    \end{itemize}
+    \item
+      Familiar approach to those that work in these (text) editors often
+    \item
+      Foreign approach to those used to WYSIWYG editors (everyone else)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Integrated Development Environments}
+    \begin{itemize}
+        \item Mac OS X
+            \begin{itemize}
+                \item \TeX shop -- \emph{http://www.uoregon.edu/~koch/texshop/}
+            \end{itemize}
+        \item Windows
+            \begin{itemize}
+                \item LEd (\LaTeX { Editor}) -- \emph{http://www.latexeditor.org}
+                \item \TeX nicCenter -- \emph{http://www.texniccenter.org}
+            \end{itemize}
+        \item Linux
+            \begin{itemize}
+                \item Kile -- \emph{http://kile.sourceforge.net/}
+            \end{itemize}
+        \item Multiplatform
+            \begin{itemize}
+                \item \TeX maker -- \emph{http://www.xm1math.net/texmaker/}
+                \item LyX -- WYSIWYM -- \emph{http://www.lyx.org/}
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Extending \LaTeX}
+
+\begin{frame}{Packages}
+  \begin{itemize}
+    \item
+      Packages are sets of macros, commands, document classes, etc. that extend
+      \LaTeX functionality past the base language.
+    \item
+      Examples include {\tt Beamer}-used to create this presentation, and
+      {\tt AMSMath}-the ubiquitous Mathematics package.
+    \item
+      Huge number of packages available-all user contributed (karnaugh maps, finite state automata, analog circuit diagrams, ...)
+    \item
+      Usenet was the old go-to for \LaTeX packages, but has since become outdated.
+    \item
+      Use CTAN, the Comprehensive \TeX Archive Network. {\em http://www.ctan.org/}
+    \item
+      If you end up writing a set of useful \LaTeX macros, consider contributing them.
+  \end{itemize}
+\end{frame}
+
+\section{The Language and Syntax}
+
+\subsection {Syntax}
+
+\begin{frame}[fragile]{\LaTeX, the Language}
+  \begin{itemize}
+    \item
+      Comments begin with `\%' and go to the end of the line
+    \item
+      Extend all the way through the next line's whitespace
+    \item
+      Commands begin with `\textbackslash'
+    \begin{itemize}
+      \item
+        Optional Parameters go after command in []'s
+      \item
+        Required Parameters go after command in \{\}'s
+      \item
+        E.g. \verb|\cmdname[opt1,opt2,...]{arg1}{arg2}...|
+    \end{itemize}
+    \item
+      Extra whitespace is ignored
+    \item
+      Environments are marked with \verb|\begin{}| and \verb|\end{}|
+    \item
+      Control Characters need to be escaped:
+      \verb|\# \$ \% \^ \{ \} \& \_ \{ \} \~ \textbackslash|
+  \end{itemize}
+\end{frame}
+
+\subsection {Formatting}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Text Formatting}
+    \begin{itemize}
+        \item Sizes: \begin{verbatim}\tiny, \scriptsize, \footnotesize, 
+        \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge\end{verbatim}
+        \item \emph{Emphasis:} \verb|\emph{...}| {\em Also:} \verb|{\em ...}|
+        \item Quotes: \LaTeX differentiates between ` and '.
+        \begin{itemize}
+            \item \verb|Single `quote'|: Single `quote'
+            \item \verb|Double ``quote|: Double ``quote
+        \end{itemize}
+        \item Sub- and Superscript: \verb|\textsubscript{...}| and \verb|\textsuperscript{...}|
+        \item {\bf Boldface} \verb|{\bf ...}|, {\it Italics} \verb|{\it ...}|, {\sc Small Caps} \verb|{\sc ..}| 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Paragraph Formatting}
+    \begin{itemize}
+        \item Alignment:
+            \begin{itemize}
+                \item Left Justified: \verb|\begin{flushleft}| and \verb|\raggedleft|
+                \item Right Justified: \verb|\begin(flushright}| and \verb|\raggedright|
+                \item Centered: \verb|\begin{center}| and \verb|\centering|
+            \end{itemize}
+        \item Line Spacing:
+            \begin{itemize}
+                \item Entire Document: Use \verb|\linespread{...}| in the preamble. \verb|\linespread{1.3}| will yield \smash{\begin{math} 1 \frac{1}{2} \end{math}} line spacing, while \verb|\linespread{1.6}| will yield double.
+                \item Section of Text: Include \verb|\usepackage{setspace}| in the preamble, which provides the \verb|singlespace|, \verb|onehalfspace|, \verb|doublespace| and \verb|spacing| environments.
+                    \begin{itemize}
+                    \item \verb|\begin{doublespace}| or \verb|\begin{spacing}{1.6}|
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Verbatim and Lists}
+    \begin{itemize}
+        \item Verbatim: Outputs exactly what is typed
+        \begin{itemize}
+            \item \verb|\begin{verbatim}...\end{verbatim}|
+        \end{itemize}
+        \item Itemize:
+        \begin{itemize}
+            \item \verb|\begin{itemize}...\end{itemize}|
+        \end{itemize}
+        \item Enumerate:
+        \begin{enumerate}
+            \item \verb|\begin{enumerate}...\end{enumerate}|
+        \end{enumerate}
+        \item Description:
+        \begin{description}
+            \item[Environment Syntax:]  \verb|\begin{description}|
+            \item[Item Syntax:] \verb|\item[Description]|
+        \end{description}
+        \item Each item is designated by the \verb|\item| command.
+        \item Different list types can be nested.
+    \end{itemize}
+\end{frame}
+
+\section{Mathematics}
+
+\subsection{Environments}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Math Environments}
+    \begin{itemize}
+        \item \LaTeX { uses} two different environments for mathematical formulae:
+        \begin{itemize}
+            \item \emph{text} -- Formulae are displayed in-line, within the body of text. Good for small equations.
+            \begin{itemize}
+                \item \verb|\begin{math}| \ldots \verb|\end{math}|
+                \item (e.g.) \ldots thus arriving at \begin{math} a^2 + b^2 = c^2 \end{math}, which is the Pythagorean Theorem.
+            \end{itemize}
+            \item \emph{displayed} -- Formulae are displayed seperated from the text. Good for large equations.
+            \begin{itemize}
+            \item \verb|\begin{equation}| \ldots \verb|\end{equation}|
+            \item (e.g.) \ldots which yields Stoke's Theorem: \begin{equation} \int_\Sigma \nabla \times \mathbf{F} \cdot \mathrm{d}\Sigma = \oint_{\partial\Sigma} \mathbf{F} \cdot \mathrm{d}\mathbf{r} \end{equation}
+            \end{itemize}
+        \end{itemize}
+    \item Always include the amsmath package by using the command \verb|\usepackage{amsmath}|.
+    \end{itemize}
+\end{frame}
+
+\subsection{Examples}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Math by Example}
+    \begin{equation*}
+        \nabla \times \mathbf{B} = \mu_0\mathbf{J} + \mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t}
+    \end{equation*}
+
+    \begin{block}{\LaTeX{ }Code:}
+            \begin{verbatim}
+                \begin{equation*}
+                    \nabla \times \mathbf{B} = \mu_0\mathbf{J} + 
+\mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t}
+                \end{equation*}
+            \end{verbatim}
+    \end{block}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Math by Example}
+    \begin{equation} \mathbf{a} \times \mathbf{b} = ab\sin\theta \; \mathbf{\hat{n}} = \mathrm{det} \begin{bmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{bmatrix} \label{CPRelations} \tag{CPR} \end{equation}
+
+    \begin{block}{\LaTeX{ }Code:}
+    \begin{verbatim}
+    \begin{equation} \mathbf{a} \times \mathbf{b} 
+= ab\sin\theta \; \mathbf{\hat{n}} = \mathrm{det}
+ \begin{bmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k}
+\\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{bmatrix} 
+\label{CPRelations} \tag{CPR} \end{equation}
+    \end{verbatim}
+    \end{block}
+
+    By labeling the equation with \verb|\label{}|, I can reference \eqref{CPRelations} by simplying using the command \verb|\eqref{CPRelations}|.
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Math by Example}
+    \setcounter{equation}{0}
+    \begin{align} \cos^2 \theta &= \Big(\frac{e^{i\theta} + e^{-i\theta}}{2}\Big)^2 \nonumber \\ 
+    &= \frac{e^{i2\theta} + 2e^{i0} + e^{-i2\theta}}{4} \nonumber \\
+    &= \frac{1 + \cos 2\theta}{2} \end{align}
+    
+    \vspace{-10pt}
+
+    \begin{block}{\LaTeX{ }Code:}
+    \small{
+    \begin{verbatim}
+    \setcounter{equation}{0}
+    \begin{align} \cos^2 \theta 
+    &= \Big(\frac{e^{i\theta} + e^{-i\theta}}{2}\Big)^2 \nonumber \\ 
+    &= \frac{e^{i2\theta} + 2e^{i0} + e^{-i2\theta}}{4} \nonumber \\
+    &= \frac{1 + \cos 2\theta}{2} \end{align}
+    \end{verbatim}}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Math by Example}
+    
+    \[ \iiint_{G} \overbrace{f(r,\phi,\theta)}^\text{Spherical Function} \,\mathrm{d}r\mathrm{d}\phi\mathrm{d}\theta = \int_0^{2\pi}\!\int_0^{2\pi}\!\int_{-4}^4 \underbrace{\sqrt{\frac{r^{\pi\frac{\varphi}{z}}}{\sqrt{r^2 + z^2}(e^{i\varphi} +  e^{-i\varphi})}}}_\text{Ugly Cylindrical Function}  \;\mathrm{d}r\mathrm{d}\varphi\mathrm{d}z\]
+
+    \begin{block}{\LaTeX{ }Code:}
+    \footnotesize{
+    \begin{verbatim}
+        \[ \iiint_{G} \overbrace{f(r,\phi,\theta)}^\text{Spherical Function}
+        \,\mathrm{d}r\mathrm{d}\phi\mathrm{d}\theta = 
+        \int_0^{2\pi} \!\int_0^{2\pi} \!\int_{-4}^4
+        \underbrace{\sqrt{ \frac{r^{\pi\frac{\varphi}{z}}}
+        {\sqrt{r^2 + z^2}(e^{i\varphi} +  e^{-i\varphi})}}}
+        _\text{Ugly Cylindrical Function}  
+        \;\mathrm{d}r \mathrm{d}\varphi \mathrm{d}z \]
+    \end{verbatim}
+    }
+    \end{block}
+\end{frame}
+
+\section{Floats}
+\subsection{Figures, Tables, and Labels}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Figures}
+        \begin{itemize}
+        \item When compiling with \emph{latex}, only Encapsulated Postscript (EPS) files can be imported.
+        \item Compiling with \emph{pdflatex} allows JPG, PDF, and PNG formats to be imported.
+        \item By using the \verb|draft| option in the \verb|\documentclass[...]{...}| command in the preamble, image output can be suppressed and every image will be replaced by the name of that image.
+        \item Remember to include the command \verb|\usepackage{graphicx}|.
+        \item Use floats! (\verb|\begin{figure}| and \verb|\begin{table}|)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Figures by Example}
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=0.3\textwidth]{lena.jpg}
+        \end{center}
+    \end{figure}
+
+    \begin{block}{\LaTeX{ }Code:}
+    \begin{verbatim}
+        \begin{figure}
+        \begin{center}
+        \includegraphics[width=0.3\textwidth]{lena.jpg}
+        \end{center}
+        \end{figure}
+    \end{verbatim}
+    \end{block}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Figures by Example}
+    \begin{figure}
+        \begin{center} \vspace{-10pt}
+            \reflectbox{\includegraphics[scale=0.1, angle = -15]{lena.jpg}}
+            \label{CNematic}
+            \caption{A Liquid Crystal} \vspace{-15pt}
+        \end{center}
+    \end{figure}
+
+    \begin{block}{\LaTeX{ }Code:}
+    \scriptsize{
+    \begin{verbatim}
+    \begin{figure}[h] %t, b, p, !, and H (with \usepackage{float})
+        \begin{center} \vspace{-5pt}
+            \reflectbox{\includegraphics[scale=0.1, angle = -15]{lena.jpg}}
+            \label{CNematic}
+            \caption{A Liquid Crystal} \vspace{-10pt}
+        \end{center}
+    \end{figure}
+    \end{verbatim}}
+    \end{block} 
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Tables by Example}
+    \begin{table}
+        \begin{tabular}[c]{|l || c | c | c | c |}
+            \hline
+                Component & Target (\%) & Target (g) & Actual (g) & Actual(\%) \\
+            \hline
+                RMS03-010C & 98.2 \% & .5024 g & .5032 g & 98.4 \% \\
+            \hline
+        \end{tabular}
+        \label{tab:measure}
+        \caption{A Table of Measurements}
+        \vspace{-15pt}
+    \end{table}
+
+    \begin{block}{\LaTeX{ }Code:}
+    \footnotesize{
+    \begin{verbatim}
+    \begin{table}
+        \begin{tabular}[c]{|l || c | c | c | c |}
+            \hline
+                Component & Target (\%) & Target (g) & Actual (g) & Actual(\%) \\
+            \hline
+                RMS03-010C & 98.2 \% & .5024 g & .5032 g & 98.4 \% \\
+            \hline
+        \end{tabular}
+    \caption{A Table of Measurements}
+    \label{tab:measure}
+    \end{table}
+    \end{verbatim}}
+    \end{block} 
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Referencing Labels}
+    \begin{itemize}
+    \item As seen before, an object can be labeled by using the \verb|\label{...}| command. 
+    \item This object can be referenced using this label with the command \verb|\ref{...}|. This will print the number assigned to the object.
+    \item Similarly, \verb|\pageref{...}| will print the page number of the referenced object.
+    \item Be sure to use \verb|\label{...}| \emph{after} \verb|\caption{...}|. Otherwise, the reference will be attached to the current section or list number.
+    \item Lists of Tables and Lists of Figures can be created by using \verb|\listoftables| or \verb|\listoffigures|. This will create a numerically ordered list of floats, complete with captions.
+    \item The caption command allows for both short captions and long captions. This is done by using \verb|\caption[short comment]{long comment}|.
+    \end{itemize}
+\end{frame}
+
+\section*{Questions?}
+
+\begin{frame}{Any Questions?}
+  This presentation will be posted online for reference.\\
+  
+  \LaTeX is much too large a topic to cover in one sitting, but hopefully this is a good start.\\
+  
+  Other References:
+  \begin{itemize}
+    \item \href{http://en.wikipedia.org/wiki/LaTeX}{Wikipedia article on \LaTeX}
+    \item \href{http://www.latex-project.org/}{\LaTeX{ }Project Site}
+    \item \href{http://en.wikibooks.org/wiki/LaTeX/}{Wikibook on \LaTeX}
+  \end{itemize}
+\end{frame}
+
+
 
 \section*{Summary}
 
@@ -326,5 +812,3 @@
 \end{frame}
 
 \end{document}
-
-

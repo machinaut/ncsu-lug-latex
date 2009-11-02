@@ -1,0 +1,23 @@
+\frametitle {\LaTeX , the Language}\begin {itemize}
+    \item
+      Comments begin with `\%' and go to the end of the line
+    \item
+      Extend all the way through the next line's whitespace
+    \item
+      Commands begin with `\textbackslash'
+    \begin{itemize}
+      \item
+        Optional Parameters go after command in []'s
+      \item
+        Required Parameters go after command in \{\}'s
+      \item
+        E.g. \verb|\cmdname[opt1,opt2,...]{arg1}{arg2}...|
+    \end{itemize}
+    \item
+      Extra whitespace is ignored
+    \item
+      Environments are marked with \verb|\begin{}| and \verb|\end{}|
+    \item
+      Control Characters need to be escaped:
+      \verb|\# \$ \% \^ \{ \} \& \_ \{ \} \~ \textbackslash|
+  \end{itemize}
