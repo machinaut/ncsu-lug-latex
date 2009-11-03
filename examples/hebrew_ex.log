@@ -1,0 +1,115 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.10.30)  3 NOV 2009 14:15
+entering extended mode
+ %&-line parsing enabled.
+**hebrew_ex.tex
+(./hebrew_ex.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, ibycus, greek, monogreek, ancientgreek, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+Package: babel 2005/11/23 v3.8h The Babel package
+
+(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2005/11/23 v3.8h Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(/usr/share/texmf/tex/generic/ivritex/rlbabel.def
+File: rlbabel.def 2002/12/26 v2.3f Right-to-Left support from the babel system 
+Hebrew language support from the babel system
+)
+(/usr/share/texmf/tex/generic/ivritex/hebrew.ldf
+File: hebrew.ldf 2002/12/26 v2.3f Hebrew language definition from the babel sys
+tem Hebrew language support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Hebrew'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@hebrew = a dialect from \language0
+)) (/usr/share/texmf/tex/generic/ivritex/lheenc.def
+File: lheenc.def 1998/01/07 v1.1a 7-bit Hebrew font encoding (test version: sti
+ll liable to change)
+)
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texmf/tex/generic/ivritex/8859-8.def
+File: 8859-8.def 2001/07/22 v1.1a Hebrew input encoding file
+))
+No file hebrew_ex.aux.
+\openout1 = `hebrew_ex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for LHE/cmr/m/n on input line 6.
+LaTeX Font Info:    Try loading font information for LHE+cmr on input line 6.
+(/usr/share/texmf/tex/generic/ivritex/lhecmr.fd
+File: lhecmr.fd 1998/01/07 v1.1a Hebrew default font (test version: still liabl
+e to change)
+)
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./hebrew_ex.aux) ) 
+Here is how much of TeX's memory you used:
+ 815 strings out of 95011
+ 9419 string characters out of 1181787
+ 58571 words of memory out of 1500000
+ 4052 multiletter control sequences out of 10000+50000
+ 3860 words of font info for 15 fonts, out of 1200000 for 2000
+ 73 hyphenation exceptions out of 8191
+ 27i,4n,20p,161b,116s stack positions out of 5000i,500n,6000p,200000b,5000s
+ </home
+/alex/.texmf-var/fonts/pk/ljfour/hebrew/jerus10.600pk></usr/share/texmf-texlive
+/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/bluesk
+y/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr7.pfb>
+Output written on hebrew_ex.pdf (1 page, 25505 bytes).
+PDF statistics:
+ 51 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
