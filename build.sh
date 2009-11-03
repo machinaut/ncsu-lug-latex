@@ -32,6 +32,8 @@ cd ..
 #clean hello
 cd hello
 rm hello.aux hello-code.tex hello.log hello.pdf
+cd ../examples
+rm hebrew_ex.aux hebrew_ex.log
 #clean presentation
 cd ../presentation
 rm presentation.aux presentation.log \
