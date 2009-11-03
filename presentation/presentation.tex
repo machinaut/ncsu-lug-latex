@@ -398,7 +398,7 @@
     \frametitle{Text Formatting}
     \begin{itemize}
         \item Sizes: \begin{verbatim}\tiny, \scriptsize, \footnotesize, 
-        \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge\end{verbatim}
+        \small, \normalsize, \large, \Large \end{verbatim}
         \item \emph{Emphasis:} \verb|\emph{...}| {\em Also:} \verb|{\em ...}|
         \item Quotes: \LaTeX differentiates between ` and '.
         \begin{itemize}
@@ -464,13 +464,11 @@
         \begin{itemize}
             \item \emph{text} -- Formulae are displayed in-line, within the body of text. Good for small equations.
             \begin{itemize}
-                \item \verb|\begin{math}| \ldots \verb|\end{math}|
-                \item (e.g.) \ldots thus arriving at \begin{math} a^2 + b^2 = c^2 \end{math}, which is the Pythagorean Theorem.
+                \item \verb|$| \ldots \verb|$| \, (e.g.) \ldots thus arriving at \begin{math} a^2 + b^2 = c^2 \end{math}, which is the Pythagorean Theorem.
             \end{itemize}
             \item \emph{displayed} -- Formulae are displayed seperated from the text. Good for large equations.
             \begin{itemize}
-            \item \verb|\begin{equation}| \ldots \verb|\end{equation}|
-            \item (e.g.) \ldots which yields Stoke's Theorem: \begin{equation} \int_\Sigma \nabla \times \mathbf{F} \cdot \mathrm{d}\Sigma = \oint_{\partial\Sigma} \mathbf{F} \cdot \mathrm{d}\mathbf{r} \end{equation}
+            \item \verb|\[| \ldots \verb|\]| \, (e.g.) \ldots which yields Stoke's Theorem: \begin{equation} \int_\Sigma \nabla \times \mathbf{F} \cdot \mathrm{d}\Sigma = \oint_{\partial\Sigma} \mathbf{F} \cdot \mathrm{d}\mathbf{r} \end{equation}
             \end{itemize}
         \end{itemize}
     \item Always include the amsmath package by using the command \verb|\usepackage{amsmath}|.
@@ -498,13 +496,11 @@
         \end{center}
     \end{figure}
 
-    \begin{block}{\LaTeX{ }Code:}
+    \begin{block}{\LaTeX{ }Code:} \small
     \begin{verbatim}
-        \begin{figure}
-        \begin{center}
-        \includegraphics[width=0.3\textwidth]{lena.jpg}
-        \end{center}
-        \end{figure}
+\begin{figure} \begin{center}
+\includegraphics[width=0.3\textwidth]{lena.jpg}
+\end{center} \end{figure}
     \end{verbatim}
     \end{block}
 \end{frame}
@@ -519,16 +515,16 @@
         \end{center}
     \end{figure}
 
-    \begin{block}{\LaTeX{ }Code:}
+    \begin{block}{\LaTeX{ }Code:} \small
     \scriptsize{
     \begin{verbatim}
-    \begin{figure}[h] %t, b, p, !, and H (with \usepackage{float})
-        \begin{center} \vspace{-5pt}
-            \reflectbox{\includegraphics[scale=0.1, angle = -15]{lena.jpg}}
-            \label{CNematic}
-            \caption{A Liquid Crystal} \vspace{-10pt}
-        \end{center}
-    \end{figure}
+\begin{figure}[h] %t, b, p, !, and H (with \usepackage{float})
+    \begin{center} \vspace{-5pt}
+        \reflectbox{\includegraphics[scale=0.1, angle = -15]{lena.jpg}}
+        \label{CNematic}
+        \caption{A Liquid Crystal} \vspace{-10pt}
+    \end{center}
+\end{figure}
     \end{verbatim}}
     \end{block} 
 \end{frame}
@@ -548,21 +544,20 @@
         \vspace{-15pt}
     \end{table}
 
-    \begin{block}{\LaTeX{ }Code:}
-    \footnotesize{
+    \begin{block}{\LaTeX{ }Code:} \footnotesize
     \begin{verbatim}
-    \begin{table}
-        \begin{tabular}[c]{|l || c | c | c | c |}
-            \hline
-                Component & Target (\%) & Target (g) & Actual (g) & Actual(\%) \\
-            \hline
-                RMS03-010C & 98.2 \% & .5024 g & .5032 g & 98.4 \% \\
-            \hline
-        \end{tabular}
-    \caption{A Table of Measurements}
-    \label{tab:measure}
-    \end{table}
-    \end{verbatim}}
+\begin{table}
+   \begin{tabular}[c]{|l || c | c | c | c |}
+      \hline
+      Component&Target (\%)&Target (g)&Actual (g)&Actual(\%)\\
+      \hline
+      RMS03-010C & 98.2 \% & .5024 g & .5032 g & 98.4 \% \\
+      \hline
+   \end{tabular}
+\caption{A Table of Measurements}
+\label{tab:measure}
+\end{table}
+    \end{verbatim}
     \end{block} 
 \end{frame}
 
@@ -610,6 +605,7 @@
   \end{itemize}
 \end{frame}
 
+\section {External Examples}
 
 \section*{Questions?}
 
@@ -628,64 +624,64 @@
 
 
 
-\section*{Summary}
-
-\begin{frame}{Summary}
-
-  % Keep the summary *very short*.
-  \begin{itemize}
-  \item
-    The \alert{first main message} of your talk in one or two lines.
-  \item
-    The \alert{second main message} of your talk in one or two lines.
-  \item
-    Perhaps a \alert{third message}, but not more than that.
-  \end{itemize}
-  
-  % The following outlook is optional.
-  \vskip0pt plus.5fill
-  \begin{itemize}
-  \item
-    Outlook
-    \begin{itemize}
-    \item
-      Something you haven't solved.
-    \item
-      Something else you haven't solved.
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-
-
-% All of the following is optional and typically not needed. 
-\appendix
-\section<presentation>*{\appendixname}
-\subsection<presentation>*{For Further Reading}
-
-\begin{frame}[allowframebreaks]
-  \frametitle<presentation>{For Further Reading}
-    
-  \begin{thebibliography}{10}
-    
-  \beamertemplatebookbibitems
-  % Start with overview books.
-
-  \bibitem{Author1990}
-    A.~Author.
-    \newblock {\em Handbook of Everything}.
-    \newblock Some Press, 1990.
- 
-    
-  \beamertemplatearticlebibitems
-  % Followed by interesting articles. Keep the list short. 
-
-  \bibitem{Someone2000}
-    S.~Someone.
-    \newblock On this and that.
-    \newblock {\em Journal of This and That}, 2(1):50--100,
-    2000.
-  \end{thebibliography}
-\end{frame}
+%\section*{Summary}
+%
+%\begin{frame}{Summary}
+%
+%  % Keep the summary *very short*.
+%  \begin{itemize}
+%  \item
+%    The \alert{first main message} of your talk in one or two lines.
+%  \item
+%    The \alert{second main message} of your talk in one or two lines.
+%  \item
+%    Perhaps a \alert{third message}, but not more than that.
+%  \end{itemize}
+%  
+%  % The following outlook is optional.
+%  \vskip0pt plus.5fill
+%  \begin{itemize}
+%  \item
+%    Outlook
+%    \begin{itemize}
+%    \item
+%      Something you haven't solved.
+%    \item
+%      Something else you haven't solved.
+%    \end{itemize}
+%  \end{itemize}
+%\end{frame}
+%
+%
+%
+%% All of the following is optional and typically not needed. 
+%\appendix
+%\section<presentation>*{\appendixname}
+%\subsection<presentation>*{For Further Reading}
+%
+%\begin{frame}[allowframebreaks]
+%  \frametitle<presentation>{For Further Reading}
+%    
+%  \begin{thebibliography}{10}
+%    
+%  \beamertemplatebookbibitems
+%  % Start with overview books.
+%
+%  \bibitem{Author1990}
+%    A.~Author.
+%    \newblock {\em Handbook of Everything}.
+%    \newblock Some Press, 1990.
+% 
+%    
+%  \beamertemplatearticlebibitems
+%  % Followed by interesting articles. Keep the list short. 
+%
+%  \bibitem{Someone2000}
+%    S.~Someone.
+%    \newblock On this and that.
+%    \newblock {\em Journal of This and That}, 2(1):50--100,
+%    2000.
+%  \end{thebibliography}
+%\end{frame}
 
 \end{document}
