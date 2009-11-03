@@ -17,6 +17,10 @@ cd ..
 cd examples
 python matplotlib_ex.py
 pdflatex hebrew_ex.tex
+pdflatex mydocument
+bibtex mydocument
+pdflatex mydocument
+pdflatex mydocument
 cd ..
 
 # build the presentation itself
@@ -34,6 +38,7 @@ cd hello
 rm hello.aux hello-code.tex hello.log hello.pdf
 cd ../examples
 rm hebrew_ex.aux hebrew_ex.log
+rm mydocument.aux mydocument.bbl mydocument.log mydocument.blg 
 #clean presentation
 cd ../presentation
 rm presentation.aux presentation.log \
