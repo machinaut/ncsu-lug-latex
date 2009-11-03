@@ -146,7 +146,7 @@
 % - If you omit details that are vital to the proof/implementation,
 %   just say so once. Everybody will be happy with that.
 
-\section{Introduction}
+\section{Overview}
 
 \subsection{A Quick ``Hello World''}
 \begin{frame}{Code}
@@ -292,76 +292,6 @@
   \end{itemize}
 \end{frame}
 
-\subsection{fooooooo}
-
-\begin{frame}{Make Titles Informative.}
-
-  You can create overlays\dots
-  \begin{itemize}
-  \item using the \texttt{pause} command:
-    \begin{itemize}
-    \item
-      First item.
-      \pause
-    \item    
-      Second item.
-    \end{itemize}
-  \item
-    using overlay specifications:
-    \begin{itemize}
-    \item<3->
-      First item.
-    \item<4->
-      Second item.
-    \end{itemize}
-  \item
-    using the general \texttt{uncover} command:
-    \begin{itemize}
-      \uncover<5->{\item
-        First item.}
-      \uncover<6->{\item
-        Second item.}
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-
-\subsection{Previous Work}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-
-
-\section{Our Results/Contribution}
-
-\subsection{Main Results}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-
-\subsection{Basic Ideas for Proofs/Implementation}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-
 \subsection{How to use \LaTeX}
 
 \begin{frame}{\LaTeX, the Document Creation System}
@@ -417,9 +347,7 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Extending \LaTeX}
-
-\begin{frame}{Packages}
+\begin{frame}{Extending \LaTeX}
   \begin{itemize}
     \item
       Packages are sets of macros, commands, document classes, etc. that extend
@@ -438,11 +366,9 @@
   \end{itemize}
 \end{frame}
 
-\section{The Language and Syntax}
+\subsection{The Language and Syntax}
 
-\subsection {Syntax}
-
-\begin{frame}[fragile]{\LaTeX, the Language}
+\begin{frame}[fragile]{Syntax}
   \begin{itemize}
     \item
       Comments begin with `\%' and go to the end of the line
@@ -467,8 +393,6 @@
       \verb|\# \$ \% \^ \{ \} \& \_ \{ \} \~ \textbackslash|
   \end{itemize}
 \end{frame}
-
-\subsection {Formatting}
 
 \begin{frame}[containsverbatim]
     \frametitle{Text Formatting}
@@ -531,9 +455,7 @@
     \end{itemize}
 \end{frame}
 
-\section{Mathematics}
-
-\subsection{Environments}
+\section{Examples}
 
 \begin{frame}[containsverbatim]
     \frametitle{Math Environments}
@@ -555,85 +477,7 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Examples}
-
-\begin{frame}[containsverbatim]
-    \frametitle{Math by Example}
-    \begin{equation*}
-        \nabla \times \mathbf{B} = \mu_0\mathbf{J} + \mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t}
-    \end{equation*}
-
-    \begin{block}{\LaTeX{ }Code:}
-            \begin{verbatim}
-                \begin{equation*}
-                    \nabla \times \mathbf{B} = \mu_0\mathbf{J} + 
-\mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t}
-                \end{equation*}
-            \end{verbatim}
-    \end{block}
-\end{frame}
-
-\begin{frame}[containsverbatim]
-    \frametitle{Math by Example}
-    \begin{equation} \mathbf{a} \times \mathbf{b} = ab\sin\theta \; \mathbf{\hat{n}} = \mathrm{det} \begin{bmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{bmatrix} \label{CPRelations} \tag{CPR} \end{equation}
-
-    \begin{block}{\LaTeX{ }Code:}
-    \begin{verbatim}
-    \begin{equation} \mathbf{a} \times \mathbf{b} 
-= ab\sin\theta \; \mathbf{\hat{n}} = \mathrm{det}
- \begin{bmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k}
-\\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{bmatrix} 
-\label{CPRelations} \tag{CPR} \end{equation}
-    \end{verbatim}
-    \end{block}
-
-    By labeling the equation with \verb|\label{}|, I can reference \eqref{CPRelations} by simplying using the command \verb|\eqref{CPRelations}|.
-\end{frame}
-
-\begin{frame}[containsverbatim]
-    \frametitle{Math by Example}
-    \setcounter{equation}{0}
-    \begin{align} \cos^2 \theta &= \Big(\frac{e^{i\theta} + e^{-i\theta}}{2}\Big)^2 \nonumber \\ 
-    &= \frac{e^{i2\theta} + 2e^{i0} + e^{-i2\theta}}{4} \nonumber \\
-    &= \frac{1 + \cos 2\theta}{2} \end{align}
-    
-    \vspace{-10pt}
-
-    \begin{block}{\LaTeX{ }Code:}
-    \small{
-    \begin{verbatim}
-    \setcounter{equation}{0}
-    \begin{align} \cos^2 \theta 
-    &= \Big(\frac{e^{i\theta} + e^{-i\theta}}{2}\Big)^2 \nonumber \\ 
-    &= \frac{e^{i2\theta} + 2e^{i0} + e^{-i2\theta}}{4} \nonumber \\
-    &= \frac{1 + \cos 2\theta}{2} \end{align}
-    \end{verbatim}}
-    \end{block}
-
-\end{frame}
-
-\begin{frame}[containsverbatim]
-    \frametitle{Math by Example}
-    
-    \[ \iiint_{G} \overbrace{f(r,\phi,\theta)}^\text{Spherical Function} \,\mathrm{d}r\mathrm{d}\phi\mathrm{d}\theta = \int_0^{2\pi}\!\int_0^{2\pi}\!\int_{-4}^4 \underbrace{\sqrt{\frac{r^{\pi\frac{\varphi}{z}}}{\sqrt{r^2 + z^2}(e^{i\varphi} +  e^{-i\varphi})}}}_\text{Ugly Cylindrical Function}  \;\mathrm{d}r\mathrm{d}\varphi\mathrm{d}z\]
-
-    \begin{block}{\LaTeX{ }Code:}
-    \footnotesize{
-    \begin{verbatim}
-        \[ \iiint_{G} \overbrace{f(r,\phi,\theta)}^\text{Spherical Function}
-        \,\mathrm{d}r\mathrm{d}\phi\mathrm{d}\theta = 
-        \int_0^{2\pi} \!\int_0^{2\pi} \!\int_{-4}^4
-        \underbrace{\sqrt{ \frac{r^{\pi\frac{\varphi}{z}}}
-        {\sqrt{r^2 + z^2}(e^{i\varphi} +  e^{-i\varphi})}}}
-        _\text{Ugly Cylindrical Function}  
-        \;\mathrm{d}r \mathrm{d}\varphi \mathrm{d}z \]
-    \end{verbatim}
-    }
-    \end{block}
-\end{frame}
-
-\section{Floats}
-\subsection{Figures, Tables, and Labels}
+\subsection{Floats, Figures, Tables}
 
 \begin{frame}[containsverbatim]
     \frametitle{Figures}
@@ -733,6 +577,39 @@
     \item The caption command allows for both short captions and long captions. This is done by using \verb|\caption[short comment]{long comment}|.
     \end{itemize}
 \end{frame}
+
+\subsection{Other examples}
+\begin{frame}{Presentation fun}
+
+  You can create overlays\dots
+  \begin{itemize}
+  \item using the \texttt{pause} command:
+    \begin{itemize}
+    \item
+      First item.
+      \pause
+    \item    
+      Second item.
+    \end{itemize}
+  \item
+    using overlay specifications:
+    \begin{itemize}
+    \item<3->
+      First item.
+    \item<4->
+      Second item.
+    \end{itemize}
+  \item
+    using the general \texttt{uncover} command:
+    \begin{itemize}
+      \uncover<5->{\item
+        First item.}
+      \uncover<6->{\item
+        Second item.}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
 
 \section*{Questions?}
 

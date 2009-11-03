@@ -13,6 +13,12 @@ pygmentize -f latex hello.tex > hello-code.tex
 # back to base dir
 cd ..
 
+# build examples
+cd examples
+python matplotlib_ex.py
+pdflatex hebrew_ex.tex
+cd ..
+
 # build the presentation itself
 cd presentation
 pdflatex presentation.tex

@@ -1,0 +1,29 @@
+\documentclass{article}
+% There may be a number of languages. The main document language is 
+% the *last* of them
+\usepackage[english,hebrew]{babel}
+
+\begin{document}
+כדי לכתוב משהו באנגלית חייבים להשתמש במקרו הבא: \L{Hello, world}. וכאן 
+ממשיכים לכתוב בעברית. טקסט נוסחאות תמיד יהיה בכיוון שמאל-לימין: 
+\[a_1+a_{2}=c^{2}\] .
+
+כעת נתחיל חלק באנגלית:
+
+\begin{otherlanguage}{english}
+Hello, World. Hebrew text inside English paragraph must come inside the 
+macro R: \R{בוקר טוב עולם}.
+
+This is the preffered way to set the language.
+\end{otherlanguage}
+
+דרך אחרת לעבור לאנגלית:
+
+\unsethebrew
+Yet Another English Paragraph
+
+And another paragraph
+\sethebrew
+
+פסקה שמינית ואחרונה )באמת(.
+\end{document}

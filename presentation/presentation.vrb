@@ -1,4 +1,4 @@
-\frametitle {\LaTeX , the Language}\begin {itemize}
+\frametitle {Syntax}\begin {itemize}
     \item
       Comments begin with `\%' and go to the end of the line
     \item
